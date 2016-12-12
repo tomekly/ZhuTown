@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/horizontal_margin"
+                android:paddingTop="@dimen/dimen_10">
+
+                <LinearLayout
+                    android:id="@+id/ll_area_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:paddingRight="@dimen/horizontal_margin"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spi_area"
+                        android:layout_width="0.0dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_area_select"
+                        android:layout_marginRight="@dimen/dimen_7"
+                        android:layout_weight="1.0"
+                        android:background="@mipmap/data_collection_bg"/>
+
+                    <Spinner
+                        android:id="@+id/spi_area_monitor"
+                        android:layout_width="0.0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="@dimen/dimen_6"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_area_select"
+                        android:layout_toRightOf="@+id/spi_area"
+                        android:layout_weight="1.0"
+                        android:background="@mipmap/data_collection_bg"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/update_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:layout_below="@+id/soilHumidity1"
+                    android:gravity="center_horizontal"
+                    android:text="更新时间："/>
+                <include layout="@layout/view_weather_data"/>
+
+                <include layout="@layout/view_station_data"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

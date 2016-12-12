@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="》"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/repository_item_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="关键问题得明白是什么相对什么的边距.padding是控件的内容相对控件的边缘的边"
+        android:textSize="20sp"
+        android:layout_marginLeft="6dp"/>
+
+    <TextView
+        android:id="@+id/repository_item_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:text="20150602"
+        android:textSize="20sp" />
+
+</LinearLayout>

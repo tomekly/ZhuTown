@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_weather_data"
+    android:visibility="visible"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="空气温度："/>
+
+        <TextView
+            android:id="@+id/airTemperature"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="空气湿度："/>
+
+        <TextView
+            android:id="@+id/airHumidity"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="气压："/>
+
+        <TextView
+            android:id="@+id/pressure"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="风速："/>
+
+        <TextView
+            android:id="@+id/windSpeed"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="风向："/>
+
+        <TextView
+            android:id="@+id/windDirection"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="雨量："/>
+
+        <TextView
+            android:id="@+id/rainfall"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="蒸发："/>
+
+        <TextView
+            android:id="@+id/evaporation"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="日照参数："/>
+
+        <TextView
+            android:id="@+id/sunshineTime"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="光合有效："/>
+
+        <TextView
+            android:id="@+id/photosynthetic"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="土壤温度："/>
+
+        <TextView
+            android:id="@+id/soilTemp1"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="土壤湿度："/>
+
+        <TextView
+            android:id="@+id/soilHumidity1"
+            style="@style/weather_data_item_value_sytle"
+            android:text=""/>
+    </RelativeLayout>
+
+
+</LinearLayout>

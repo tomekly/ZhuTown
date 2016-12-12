@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="area_name">
+        <item>大田种植</item>
+        <item>畜牧养殖</item>
+        <item>泓德生态园</item>
+    </string-array>
+    <integer-array name="area_id">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+    <!--列表显示的名称-->
+    <string-array name="optionName">
+        <item>空气湿度</item>
+        <item>空气温度</item>
+        <item>土壤湿度</item>
+    </string-array>
+
+    <string-array name="weather_option_name">
+        <item>空气温度</item>
+        <item>空气湿度</item>
+        <item>气压</item>
+        <item>风速</item>
+        <item>风向</item>
+        <item>雨量</item>
+        <item>蒸发</item>
+        <item>日照参数</item>
+        <item>光合有效</item>
+        <item>土壤温度</item>
+        <item>土壤湿度</item>
+    </string-array>
+
+    <string-array name="stationOptionName">
+        <item>空气温度</item>
+        <item>湿度</item>
+        <item>光照度</item>
+        <item>二氧化碳</item>
+        <item>氨气</item>
+        <item>硫化氢</item>
+    </string-array>
+    <string-array name="environmental_data_title">
+        <item>数据采集</item>
+        <item>智能控制</item>
+        <!--<item>数据分析</item>-->
+        <!--<item>数据汇总</item>-->
+    </string-array>
+    <string-array name="diagnostic_types">
+        <item>虫害</item>
+        <item>药害 </item>
+        <item>病毒</item>
+        <item>细菌</item>
+        <item>养护</item>
+    </string-array>
+    <string-array name="diagnostic_address">
+        <item>南京</item>
+        <item>北京 </item>
+        <item>上海</item>
+        <item>天津</item>
+        <item>广东</item>
+    </string-array>
+
+</resources>

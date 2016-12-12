@@ -1,0 +1,128 @@
+apply plugin: 'com.android.application'
+//打包时间戳
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        applicationId "com.dongbang.yutian"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 6
+        versionName "v1.5.23"
+        multiDexEnabled false //这个不能分割 待会单独领出来 说一下
+        // 默认是umeng的渠道
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+    }
+
+
+    signingConfigs {
+        //发行包 签名配置
+        release {
+            keyAlias 'yutian    '  //别名
+            keyPassword 'db123456' //
+            storeFile file('keystore/release.jks') //签名文件路径
+            storePassword 'db123456'//签名密码
+        }
+        //测试包签名配置
+        debug {
+            keyAlias 'yutian' //别名
+            keyPassword 'db123456'
+            storeFile file('keystore/debug.jks')//测试包签名路径 该签名文件我是放在了 app目录下新建了一个keystore文件夹
+            storePassword 'db123456' //签名密码
+        }
+
+        lintOptions {
+            abortOnError false  //这个属性 网上说是  每次都会检查lint 错误， 所以设置成false 忽略检查
+        }
+
+        buildTypes {
+            //测试包
+            debug {
+                // 这个是控制显示LOG true 显示 false 不显示
+                buildConfigField "boolean", "LOG_DEBUG", "true"
+                versionNameSuffix "-debug" //测试包版本名后缀 这个在安装的时候，会看到
+                minifyEnabled false //代码混淆 false 不混淆，true 混淆
+                zipAlignEnabled true // zipalign 优化 这个也要单独领出来说一下
+                shrinkResources false //移除无用的resource文件
+                signingConfig signingConfigs.debug //签名调用
+            }
+
+            release {
+                // 不显示Log
+                buildConfigField "boolean", "LOG_DEBUG", "false"
+                minifyEnabled false //代码混淆
+                zipAlignEnabled true //zipalign 优化
+                // 移除无用的resource文件
+                shrinkResources false
+                //  加载默认混淆配置文件 progudard-android.txt在sdk目录里面，不用管，proguard.cfg是我们自己配<span></span>的混淆文件
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                //打包签名
+                signingConfig signingConfigs.release
+
+                applicationVariants.all { variant ->
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            // 输出apk名称为boohee_v1.0_2015-01-15_wandoujia.apk
+                            def fileName = "wuxiyutian-${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                            output.outputFile = new File(outputFile.parent, fileName)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //多渠道批量打包 渠道名
+    productFlavors {
+        xiaomi {}
+        _360 {}
+        baidu {}
+        wandoujia {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'armeabi-v7a'
+//            universalApk true
+//        }
+//    }
+
+}
+
+repositories { flatDir { dirs 'libs' } }
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/butterknife-7.0.1.jar')
+    compile files('libs/zxing.jar')
+    compile(name: 'hellocharts-library-release', ext: 'aar')
+    compile files('libs/ksoap2-android-assembly-3.1.1-jar-with-dependencies.jar')
+    compile 'com.zhy:base-adapter:2.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+    compile files('libs/core_api.jar')
+    compile files('libs/IDpsdkCore.jar')
+    compile files('libs/IPlaySDK.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/classes.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+}

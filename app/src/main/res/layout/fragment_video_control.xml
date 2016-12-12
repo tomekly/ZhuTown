@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_video"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/dimen_16">
+
+            <TextView
+                android:id="@+id/videoBaseSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="基地选择"
+                android:textSize="@dimen/text_size_18sp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/videoSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_8"
+                android:layout_toRightOf="@+id/videoBaseSelect"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_below="@+id/layout_spinner"
+            android:layout_weight="2.3">
+
+            <SurfaceView
+                android:id="@+id/videoSurfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <android.support.v4.widget.ContentLoadingProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:id="@+id/imgVideoStart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:background="@color/color_000000"
+                android:padding="100dp"
+                android:src="@mipmap/img_video_play"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_video_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_coordinator"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_video_error_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="你还没有登录视频账户"
+            android:textSize="@dimen/text_size_18sp"/>
+
+
+        <Button
+            android:id="@+id/btn_video_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_video_error_msg"
+            android:text="登录"
+            android:textSize="@dimen/text_size_18sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

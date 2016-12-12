@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <!--<include layout="@layout/layout_app_bar"/>-->
+
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+      <!--/>-->
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginTop="1dp">-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:text="用户名:"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="20sp"/>-->
+<!--</FrameLayout>-->
+    <android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+    android:paddingTop="@dimen/horizontal_margin"
+    android:paddingRight="@dimen/horizontal_margin"
+    android:paddingLeft="@dimen/horizontal_margin"
+    android:paddingBottom="@dimen/horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="农产品质量安全追溯平台"
+    android:id="@+id/textView"
+    android:textSize="30sp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="66dp" />
+    <android.support.design.widget.TextInputEditText
+    android:layout_width="250dp"
+    android:layout_height="50dp"
+    android:layout_below="@+id/textView"
+    android:hint="请输入条码或扫描条形码"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="61dp"
+    android:id="@+id/product_tracing_et" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="扫描"
+    android:id="@+id/product_tracing_bt01"
+    android:layout_marginTop="71dp"
+    android:layout_below="@+id/product_tracing_et"
+    android:layout_alignLeft="@+id/product_tracing_et"
+    android:layout_alignStart="@+id/product_tracing_et" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="确定"
+    android:id="@+id/product_tracing_btn02"
+    android:layout_alignTop="@+id/product_tracing_bt01"
+    android:layout_alignRight="@+id/product_tracing_et"
+    android:layout_alignEnd="@+id/product_tracing_et" />
+    </RelativeLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/item_bg"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5696ff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!--<ImageView-->
+
+            <!--android:layout_width="45dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:id="@+id/item_control_icon"-->
+            <!--android:src="@drawable/devices_1" />-->
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="控制器"
+            android:textSize="20sp"
+            android:id="@+id/item_control_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:text="28%"
+            android:id="@+id/item_control_vaule"
+            android:visibility="gone"
+            />
+
+        <CheckBox
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/switch_off"
+            android:checked="false"
+            android:button="@null"
+            android:id="@+id/item_control_btn"
+            />
+
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@color/item_bg"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/switch_on"
+            android:id="@+id/img_btn"
+            android:button="@null"
+            />
+    </LinearLayout>
+
+</LinearLayout>

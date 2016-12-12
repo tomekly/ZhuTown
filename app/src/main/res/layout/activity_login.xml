@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+	android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include layout="@layout/layout_app_bar"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:layout_margin="@dimen/activity_vertical_margin">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/activity_login"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/server_name_text"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="@string/login_activity_ip" />
+
+			<EditText
+				android:id="@+id/editText_server"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:ems="10"
+				android:text="60.2.112.42" >
+
+				<requestFocus />
+			</EditText>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/activity_login"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/server_port_text"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="@string/login_activity_port" />
+			<EditText
+				android:id="@+id/editText_server_Port"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:ems="10"
+				android:text="9000" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/activity_login"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/UserName"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="@string/login_activity_user" />
+			<EditText
+				android:id="@+id/editText_server_user"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:ems="10"
+				android:text="system" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/activity_login"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/Passwd"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="@string/login_activity_password" />
+
+			<EditText
+				android:id="@+id/editText_server_password"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:ems="10"
+				android:text="123456" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/activity_login"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/buttonLogin"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:text="@string/login_activity_login" />
+
+			<Button
+				android:id="@+id/buttonLogout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:text="@string/login_activity_logout" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+	    
+</LinearLayout>

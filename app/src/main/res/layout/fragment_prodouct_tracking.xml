@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="用户名:"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/text_name"
+            android:gravity="center_vertical"
+            android:paddingLeft="100dp"
+            android:text="用户名"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+    </FrameLayout>
+
+    <!---->
+    <!---->
+    <!--<TextView-->
+        <!--android:id="@+id/product_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/dimen_40dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/trace_platform"-->
+        <!--android:textColor="@color/color_000000"-->
+        <!--android:textSize="@dimen/text_size_24sp"/>-->
+
+
+    <!--<android.support.v7.widget.AppCompatEditText-->
+        <!--android:id="@+id/product_edt"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_below="@+id/product_title"-->
+        <!--android:layout_marginLeft="@dimen/dimen_20dp"-->
+        <!--android:layout_marginRight="@dimen/dimen_20dp"-->
+        <!--android:layout_marginTop="@dimen/dimen_20dp"-->
+        <!--android:background="@drawable/product_edt_style"-->
+        <!--android:cursorVisible="true"-->
+        <!--android:drawableLeft="@mipmap/product_search_1"-->
+        <!--android:drawablePadding="@dimen/dimen_20dp"-->
+        <!--android:paddingLeft="10dp"/>-->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/product_scan"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/product_edt"-->
+        <!--android:layout_marginLeft="@dimen/dimen_40dp"-->
+        <!--android:layout_marginTop="@dimen/dimen_20dp"-->
+        <!--android:background="@drawable/product_btn_style"-->
+        <!--android:text="扫描"-->
+        <!--android:textColor="@color/color_fafafa"-->
+        <!--android:textSize="@dimen/text_size_18sp"/>-->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/product_confirm"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_below="@+id/product_edt"-->
+        <!--android:layout_marginRight="@dimen/dimen_40dp"-->
+        <!--android:layout_marginTop="@dimen/dimen_20dp"-->
+        <!--android:background="@drawable/product_btn_style"-->
+        <!--android:text="确定"-->
+        <!--android:textColor="@color/color_fafafa"-->
+        <!--android:textSize="@dimen/text_size_18sp"/>-->
+</RelativeLayout>
+
+

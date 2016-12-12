@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_app_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="标题标题标题"
+                android:textColor="@color/color_000000"
+                android:paddingTop="@dimen/dimen_20dp"
+                android:paddingBottom="@dimen/dimen_20dp"
+                android:textSize="@dimen/text_size_20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/content_con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="@color/color_afafaf"
+                android:text="标题标题标题"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

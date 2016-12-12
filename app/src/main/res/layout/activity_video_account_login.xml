@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video_account_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dongbang.yutian.activity.VideoAccountLoginActivity">
+
+    <include layout="@layout/layout_app_bar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_8"
+        android:paddingRight="@dimen/dimen_8"
+        android:layout_below="@+id/layout_coordinator"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edt_ip"
+            android:layout_width="match_parent"
+            android:hint="输入ip地址"
+            android:text="60.2.112.42"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edt_port"
+            android:hint="输入端口"
+            android:text="9000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:hint="输入用户名称"
+            android:text="system"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:hint="输入密码"
+            android:text="123456"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"/>
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_video_account_sign_in"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/product_btn_style"
+            android:text="登录"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

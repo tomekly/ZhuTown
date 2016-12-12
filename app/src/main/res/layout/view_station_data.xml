@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_station_data"
+    android:visibility="visible"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="空气温度："/>
+
+        <TextView
+            android:id="@+id/edt1"
+            style="@style/weather_data_item_value_sytle"
+            android:text="0.0"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="湿度："/>
+
+        <TextView
+            android:id="@+id/edt2"
+            style="@style/weather_data_item_value_sytle"
+            android:text="0.0"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="光照度："/>
+
+        <TextView
+            android:id="@+id/edt3"
+            style="@style/weather_data_item_value_sytle"
+            android:text="0.0"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="二氧化碳："/>
+
+        <TextView
+            android:id="@+id/edt4"
+            style="@style/weather_data_item_value_sytle"
+            android:text="0.0"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="硫化氢浓度："/>
+
+        <TextView
+            android:id="@+id/edt5"
+            style="@style/weather_data_item_value_sytle"
+            android:text="0.0"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_eaeaea"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/weather_data_item_title_sytle"
+            android:text="氨气浓度："/>
+
+        <TextView
+            android:id="@+id/edt6"
+            style="@style/weather_data_item_value_sytle"
+            android:text="0.0"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

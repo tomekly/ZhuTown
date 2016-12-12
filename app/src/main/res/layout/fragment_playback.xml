@@ -1,0 +1,395 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_detail"
+    style="?android:attr/textAppearanceLarge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp"
+    android:scrollbarAlwaysDrawVerticalTrack="false"
+    tools:context=".dhvideo.item.ItemDetailFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/spinner_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spinner_childname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_excute_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CamID"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/et_cam_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxEms="15"
+                    android:minEms="10"
+                    android:singleLine="true"
+                    android:text="1000009$1$0$0"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_records"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="来源：" />
+
+                <Spinner
+                    android:id="@+id/sp_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="类型："
+                    android:layout_weight="5"/>
+
+                <Spinner
+                    android:id="@+id/sp_video_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_query_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="查询录像"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间："
+                    android:layout_weight="1"/>
+
+                <DatePicker
+                    android:id="@+id/dp_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:layout_weight="3"/>
+
+                <TimePicker
+                    android:id="@+id/tp_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"/>
+
+                <!--  
+                <Button
+                    android:id="@+id/bt_record_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抓图" />
+                    
+                -->     
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间："
+                    android:layout_weight="5"/>
+
+                <DatePicker
+                    android:id="@+id/dp_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:layout_weight="1"/>
+
+                <TimePicker
+                    android:id="@+id/tp_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <!--
+                <Button
+                    android:id="@+id/bt_close_cam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭CAM" />
+
+                <Spinner
+                    android:id="@+id/sp_video_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                    
+               -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/bt_playback_by_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="按文件回放"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/bt_playback_by_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="按时间回放"
+                    android:layout_weight="1"/>
+
+                <!--
+                <Button
+                    android:id="@+id/bt_pause_playback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂停回放" />
+
+                <Button
+                    android:id="@+id/bt_continue_playback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="继续回放" />
+
+				--> 
+                <Button
+                    android:id="@+id/bt_close_playback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="关闭回放"
+                    android:layout_weight="1"/>
+
+                <!--  
+                <Button
+                    android:id="@+id/bt_download_by_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="按文件下载" />
+
+                <Button
+                    android:id="@+id/bt_download_by_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="按时间下载" />
+
+                <Button
+                    android:id="@+id/bt_pause_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂停下载" />
+
+                <Button
+                    android:id="@+id/bt_continue_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="继续下载" />
+
+                <Button
+                    android:id="@+id/bt_close_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="停止下载" />
+                    
+                -->
+            </LinearLayout>
+
+            <!--
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="回放进度"/>
+                <SeekBar android:id="@+id/sb_process_bar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"/>
+            </LinearLayout>
+            <SurfaceView android:id="@+id/sv_player"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"/>
+            
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/bt_local_playback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="本地录像回放"/>
+                <Button android:id="@+id/bt_open_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打开音频"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="进度："/>
+                <TextView android:id="@+id/tv_playback_process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/bt_current_play_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前的播放时间"/>
+                <Button android:id="@+id/bt_close_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭音频"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音量"/>
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="音量"/>
+                <EditText android:id="@+id/et_audio_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:minEms="5"
+                    android:maxEms="7"/>
+                <Button android:id="@+id/bt_get_audio_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获取音量"/>
+                <Button android:id="@+id/bt_set_audio_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置音量"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频属性"/>
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="亮度"/>
+                <EditText android:id="@+id/et_light_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:minEms="5"
+                    android:maxEms="7"
+                    android:text="64"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="饱和度"/>
+                <EditText android:id="@+id/et_fill_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:minEms="5"
+                    android:maxEms="7"
+                    android:text="64"/>
+                <Button android:id="@+id/bt_get_vedio_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获取"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="对比度"/>
+                <EditText android:id="@+id/et_compare_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:minEms="5"
+                    android:maxEms="7"
+                    android:text="64"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="色调"/>
+                <EditText android:id="@+id/et_color_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:minEms="5"
+                    android:maxEms="7"
+                    android:text="64"/>
+                <Button android:id="@+id/bt_set_vedio_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="调整"/>
+            </LinearLayout>   
+
+            -->
+
+            <SurfaceView
+                android:id="@+id/sv_player"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

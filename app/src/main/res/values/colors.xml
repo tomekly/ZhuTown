@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3CB018</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">@color/white</color>
+    <color name="black">#000</color>
+    <color name="scan_bg">#7f000000</color>
+    <color name="color_458F14">#458F14</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_dcdcdc">#dcdcdc</color>
+    <color name="white">#ffffff</color>
+    <color name="color_afafaf">#afafaf</color>
+    <color name="color_343434">#343434</color>
+    <color name="color_B86A3C">#B86A3C</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="color_6D8FB0">#6D8FB0</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_eaeaea">#eaeaea</color>
+    <color name="color_f7f7f7">#f7f7f7</color>
+    <color name="goldenRod">#DAA520</color>
+    <color name="color_fafafa">#fafafa</color>
+    <color name="color_99c414">#99c414</color>
+    <color name="color_9ac416">#9ac416</color>
+    <color name="color_c8df80">#c8df80</color>
+    <color name="color_fbfcf5">#fbfcf5</color>
+    <color name="item_bg">#00000000</color>
+
+
+    <color name="action_text_color_normal">#cfcfcf</color>
+    <color name="action_text_color_pressed">#353535</color>
+    <color name="action_text_color_enabled">#818585</color>
+</resources>

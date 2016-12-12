@@ -1,0 +1,208 @@
+<com.dongbang.yutian.widget.MyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_f0f0f0"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    tools:context="com.dongbang.yutian.fragment.HomePageFragment">
+
+        <RelativeLayout
+            android:id="@+id/framing_knowledge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_header">
+
+            <RelativeLayout
+                android:id="@+id/layout_relative_framing_knowledge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_18"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_9.5"
+                android:paddingRight="@dimen/dimen_9.5">
+
+                <ImageView
+                    android:id="@+id/framing_knowledge_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/hp_img_framing_knowledeg"/>
+
+                <TextView
+                    android:id="@+id/homepage_framing_knowledge_title"
+                    style="@style/homepage_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/framing_knowledge_img"
+                    android:text="@string/framing_knowledge"/>
+
+                <TextView
+                    android:id="@+id/homepage_more"
+                    style="@style/homepage_more_sytle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <!--android:visibility="gone"-->
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/homepage_framing_knowledge_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/layout_relative_framing_knowledge"
+                android:layout_marginLeft="@dimen/dimen_7"
+                android:layout_marginRight="@dimen/dimen_7"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:background="@color/color_B86A3C"/>
+
+            <com.dongbang.yutian.widget.CustomeRecyclerView
+                android:id="@+id/recycler_framing_knowledge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/homepage_framing_knowledge_line"
+                android:layout_marginTop="@dimen/dimen_5"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/hp_line_kn_ac"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/framing_knowledge"
+            android:background="@color/color_f0f0f0"
+            android:layout_height="8dp"/>
+        <RelativeLayout
+            android:id="@+id/framing_achievement"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/hp_line_kn_ac"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_relative_framing_achievement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_18"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_9.5"
+                android:paddingRight="@dimen/dimen_9.5">
+
+                <ImageView
+                    android:id="@+id/framing_achievement_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/framing_achievement_img"/>
+
+                <TextView
+                    android:id="@+id/homepage_framing_achievement_title"
+                    style="@style/homepage_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_7"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/framing_achievement_img"
+                    android:text="@string/framing_achievement"/>
+
+                <TextView
+                    android:id="@+id/homepage_achievement_more"
+                    style="@style/homepage_more_sytle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!--android:visibility="gone"-->
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/homepage_framing_achievement_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/layout_relative_framing_achievement"
+                android:layout_marginLeft="@dimen/dimen_7"
+                android:layout_marginRight="@dimen/dimen_7"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:background="@color/color_458F14"/>
+
+            <com.dongbang.yutian.widget.CustomeRecyclerView
+                android:id="@+id/recycler_framing_achievement"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/homepage_framing_achievement_line"
+                android:layout_marginTop="@dimen/dimen_5"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/hp_framing_header"/>
+
+            <!--<EditText-->
+                <!--android:id="@id/edt_search"-->
+                <!--android:layout_width="300dp"-->
+                <!--android:layout_height="36dp"-->
+                <!--android:paddingLeft="@dimen/dimen_12"-->
+                <!--android:layout_gravity="center_horizontal|bottom"-->
+                <!--android:background="@drawable/homepage_input_edt_style"-->
+                <!--android:drawableLeft="@mipmap/hp_framing_search"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:hint="输入农产品追溯码"-->
+                <!--android:imeOptions="actionSearch"-->
+                <!--android:singleLine="true"/>-->
+            <LinearLayout
+                android:layout_width="300dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal|bottom"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:layout_height="45dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/img_erweima"
+                    android:src="@mipmap/erweima_img"
+                    android:layout_width="50dp"
+                    android:padding="8dp"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/edt_search"
+                    android:layout_width="0.0dp"
+                    android:hint="输入农产品追溯码"
+                    android:layout_weight="1"
+                    android:background="@mipmap/search_bg"
+
+                    android:paddingLeft="@dimen/text_size_10sp"
+                    android:textColor="@color/black"
+                    android:layout_height="40dp"/>
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="wrap_content"
+                    android:src="@mipmap/search"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</com.dongbang.yutian.widget.MyScrollView>

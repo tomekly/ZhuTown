@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/hp_framing_header"
+    android:clipToPadding="true">
+
+    <include layout="@layout/layout_app_bar" />
+
+    <FrameLayout
+        android:id="@+id/layout_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_bar"
+        android:layout_below="@+id/layout_coordinator" />
+
+    <com.dongbang.yutian.widget.BottomNavigationBar
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:show_type="normal"
+        app:textCheckedColor="@color/color_458F14"
+        app:textUnCheckedColor="@color/color_000000" />
+</RelativeLayout>

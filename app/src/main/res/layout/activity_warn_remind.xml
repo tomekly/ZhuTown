@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+<include layout="@layout/layout_app_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阀值"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/tv1"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="设施农业2号大棚-空气温度（低于阀值）"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:paddingRight="5dp"
+            android:text="05-09 10.07" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阀值"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/tv13"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="设施农业2号大棚-湿度（低于阀值）"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:paddingRight="5dp"
+            android:text="05-09 10.12" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阀值"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/tv12"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="设施农业2号大棚-空气温度（低于阀值）"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:paddingRight="5dp"
+            android:text="05-09 10.18" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阀值"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/tv11"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="设施农业2号大棚-空气温度（低于阀值）"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:paddingRight="5dp"
+            android:text="05-09 10.21" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
