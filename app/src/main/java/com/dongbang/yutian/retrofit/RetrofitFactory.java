@@ -21,11 +21,5 @@ public class RetrofitFactory {
     public static  RetrofitService getRetrofitService(String url){
         return  getRetrofit(url).create(RetrofitService.class);
     }
-    private static Retrofit getRetrofit1(String url){
-        Retrofit retrofit=new Retrofit.Builder().baseUrl(url).addConverterFactory(ScalarsConverterFactory.create()).build();
-        return retrofit;
-    }
-    public static  RetrofitService getRetrofitService1(String url){
-        return  getRetrofit(url).create(RetrofitService.class);
-    }
+
 }

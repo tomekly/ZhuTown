@@ -30,8 +30,7 @@ public interface RetrofitService {
     @GET("index.php?m=yutian&c=index&a=getQaqById")
     Call<ResponseDiagnosticLogOutEntity> getDiagnosticLogOut(@Query("id")String id);
 
-    @GET("index.php?m=yutian&c=index&a=getQaqById")
-    Call<String> getDiagnosticLogOut1(@Query("id")String id);
+
 
 
     @GET("index.php?m=yutian&c=index&a=getInfoByCode")
