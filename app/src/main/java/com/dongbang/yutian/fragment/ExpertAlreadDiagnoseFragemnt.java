@@ -68,6 +68,7 @@ public class ExpertAlreadDiagnoseFragemnt extends BaseFragment {
     @Override
     public void onStart() {
         super.onStart();
+//        requestDiagnosticLogOut1();
         requestDiagnosticLogOut();
     }
 
@@ -84,7 +85,10 @@ public class ExpertAlreadDiagnoseFragemnt extends BaseFragment {
             @Override
             public void onResponse(Call<ResponseDiagnosticLogOutEntity> call, Response<ResponseDiagnosticLogOutEntity> response) {
                 ResponseDiagnosticLogOutEntity rdloe=response.body();
-                adapter.addAll(rdloe.getSolved());
+                if (rdloe.getSolved()!=null){
+                    adapter.addAll(rdloe.getSolved());
+                }
+
             }
             @Override
             public void onFailure(Call<ResponseDiagnosticLogOutEntity> call, Throwable t) {
@@ -93,5 +97,20 @@ public class ExpertAlreadDiagnoseFragemnt extends BaseFragment {
         });
     }
 
+
+    private  void requestDiagnosticLogOut1(){
+        Call<String> call =RetrofitFactory.getRetrofitService1(RetrofitFactory.BASE_URL).getDiagnosticLogOut1(String.valueOf(167));
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                LogUtils.d(TAG,response.toString());
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                LogUtils.d(TAG,t.toString(),t);
+            }
+        });
+    }
 
 }

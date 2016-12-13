@@ -3,6 +3,7 @@ package com.dongbang.yutian.retrofit;
 import retrofit2.Retrofit;
 
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 
 /**
@@ -20,5 +21,11 @@ public class RetrofitFactory {
     public static  RetrofitService getRetrofitService(String url){
         return  getRetrofit(url).create(RetrofitService.class);
     }
-
+    private static Retrofit getRetrofit1(String url){
+        Retrofit retrofit=new Retrofit.Builder().baseUrl(url).addConverterFactory(ScalarsConverterFactory.create()).build();
+        return retrofit;
+    }
+    public static  RetrofitService getRetrofitService1(String url){
+        return  getRetrofit(url).create(RetrofitService.class);
+    }
 }

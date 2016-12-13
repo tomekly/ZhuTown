@@ -77,7 +77,9 @@ public class ExpertWaitDiagnoseFragemnt extends BaseFragment {
             @Override
             public void onResponse(Call<ResponseDiagnosticLogOutEntity> call, Response<ResponseDiagnosticLogOutEntity> response) {
                 ResponseDiagnosticLogOutEntity rdloe = response.body();
-                adapter.addAll(rdloe.getUnsolved());
+                if (rdloe.getUnsolved()!=null){
+                    adapter.addAll(rdloe.getUnsolved());
+                }
             }
 
             @Override

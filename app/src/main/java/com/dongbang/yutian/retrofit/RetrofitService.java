@@ -30,6 +30,10 @@ public interface RetrofitService {
     @GET("index.php?m=yutian&c=index&a=getQaqById")
     Call<ResponseDiagnosticLogOutEntity> getDiagnosticLogOut(@Query("id")String id);
 
+    @GET("index.php?m=yutian&c=index&a=getQaqById")
+    Call<String> getDiagnosticLogOut1(@Query("id")String id);
+
+
     @GET("index.php?m=yutian&c=index&a=getInfoByCode")
     Call<ProductInfoEntity> getAsCendContent(@Query("code") String code);
     //登录接口

@@ -79,7 +79,6 @@ public class ExpertActivity extends BaseActivity {
         mViewPager.setAdapter(adapter);
         tablayout.setupWithViewPager(mViewPager,true);
         mViewPager.setOffscreenPageLimit(1);
-
     }
 
 
